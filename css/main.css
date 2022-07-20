@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background-color: #f8ecea;
+    color: rgb(32, 32, 32);
+}
+
+.smiley {
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+.btn {
+    color: rgb(32, 32, 32);
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f87e6d;
+    border: #F79489 solid 2px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 20px 5px;
+}
+
+.btn:hover {
+    background-color: #f3b4ae;
+}
+
+table {
+    margin: auto;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #f3b4ae;
+    font-size: larger;
+    font-weight: 500;
+    border: #F79489 solid 2px;
+    cursor: pointer;
+}
+
+.is-shown {
+    background-color: #f8ecea;
+}
