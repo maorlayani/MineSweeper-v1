@@ -12,20 +12,45 @@
 <body onload="initGame()">
     <h1>Mine Sweeper</h1>
     <div>
-        <span class="smiley" onclick="initGame()">😀</span>
+        <span class="smiley" onclick="restart()">😀</span>
     </div>
-    <button class="btn btn-start" onclick="initGame(4, 2)">Beginner: 16 Cells</button>
-    <button class="btn btn-start" onclick="initGame(8, 12)">Medium: 25 Cells</button>
-    <button class="btn btn-start" onclick="initGame(12, 30)">Expert: 36 Cells</button>
+    <div class="btn-start-container">
+        <button class="btn btn-start" onclick="initGame(4, 2, 'beginner')">Beginner</button>
+        <button class="btn btn-start" onclick="initGame(8, 12, 'medium')">Medium</button>
+        <button class="btn btn-start" onclick="initGame(12, 30, 'expert')">Expert</button>
+    </div>
+    <div class="btn-mode-container">
+        <button class="btn btn-mode" onclick="manualMode()">Manual mode</button>
+        <button class="btn btn-mode" onclick="undo()">Undo</button>
+        <button class="btn btn-mode" onclick="sevenBoomMode()">7 BOOM</button>
+    </div>
 
     <div class="board-container"></div>
-    <div>
-        <p>Time: <span class="timer">0</span></p>
-        <p>Lives left: <span class="lives"></span></p>
+
+    <div class="best-time-container">
+        <p>BEST TIME: <span class="best-time">0</span> secondes</p>
+    </div>
+    <div class="features-container">
+        <span class="show-feature">🚩: <span class="flags"></span></span>
+        <span class="show-feature">⏱: <span class="timer">0</span></span>
+        <span class="show-feature">LIVES: <span class="lives"></span></span>
+        <div class="help-container"></div>
+    </div>
+    <div class="safe">
+        <button class="btn btn-safe" onclick="showSafeCell()">Safe Click</button>
+        <p class="safe-text"><span class="safe-count"></span> clicks available</p>
+    </div>
     </div>
 
-
-
+    <script src="js/utils.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/timer.js"> </script>
+    <script src="js/marked.js"></script>
+    <script src="js/safe.js"></script>
+    <script src="js/help.js"></script>
+    <script src="js/undo.js"></script>
+    <script src="js/sevenBoom.js"></script>
+    <script src="js/bestTime.js"></script>
     <script src="js/main.js"></script>
 </body>
 

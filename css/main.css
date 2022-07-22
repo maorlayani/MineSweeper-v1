@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #f8ecea;
+    background-color: #f7f4f3;
     color: rgb(32, 32, 32);
 }
 
@@ -14,16 +14,30 @@ body {
     color: rgb(32, 32, 32);
     cursor: pointer;
     padding: 10px;
-    background-color: #f87e6d;
-    border: #F79489 solid 2px;
-    border-radius: 5px;
     font-weight: 600;
     margin: 20px 5px;
+    width: 120px;
 }
 
-.btn:hover {
+.btn-start {
+    background-color: #f87e6d;
+    border: #F79489 solid 2px;
+}
+
+.btn-start:hover {
     background-color: #f3b4ae;
 }
+
+.btn-mode {
+    background-color: #fcd085;
+    border: #f3c67d solid 2px;
+}
+
+.btn-mode:active {
+    background-color: #f8e2ba;
+}
+
+
 
 table {
     margin: auto;
@@ -42,4 +56,54 @@ table {
 
 .is-shown {
     background-color: #f8ecea;
+}
+
+.btn-safe {
+    background-color: #92e25d;
+    border: #78df34 solid 2px;
+}
+
+.btn-safe:active {
+    background-color: #b8e29d;
+}
+
+.help {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.safe-text {
+    display: block;
+    margin-top: -15px;
+}
+
+.features-container {
+    margin-top: 15px;
+}
+
+.help-container {
+    display: inline-block;
+}
+
+.best-time-container {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.show-feature {
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.blink-me {
+    background-color: #F9F9C5;
+    animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.2;
+    }
 }
