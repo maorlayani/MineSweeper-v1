@@ -22,7 +22,6 @@ function renderPrevPlay(i, j, value) {
         if (cell.isMine) {
             cell.isShown = false
             gGame.markedCount--
-            gGame.shownCount--
         }
     } else if (value === 'marked') {
         cell.isMarked = !cell.isMarked
