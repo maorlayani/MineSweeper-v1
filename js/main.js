@@ -99,23 +99,22 @@ function cellClicked(elCell, i, j) {
         }
     }
     // Update Model
-
+    if (!cell.isMine) {
+        cell.isShown = true
+        gGame.shownCount++
+    }
+    console.log('gGame.shownCount AFTER NUM CELL', gGame.shownCount)
     // Update DOM
     if (cell.minesAroundCount === 0 && !cell.isMine) {
         fullExpand(gBoard, i, j)
         // Save the play
         gPrevPlays.push(gPrevPlay)
         gPrevPlay = []
-        cell.isShown = true
-
     } else {
         // Save the play
         gPrevPlay.push({ type: 'show', i, j })
         gPrevPlays.push(gPrevPlay)
         gPrevPlay = []
-        cell.isShown = true
-        if (!cell.isMine) gGame.shownCount++
-        console.log('not amine')
     }
     renderCell(i, j)
     checkGameOver()
